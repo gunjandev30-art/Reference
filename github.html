@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Responsive Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">MySite</h1>
+      <nav class="nav" id="nav">
+        <a href="#">Home</a>
+        <a href="github.html">GitHub</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+<section class="git-section">
+  <h2 class="git-title">Connect VS Code to GitHub</h2>
+
+  <div class="git-steps">
+
+    <div class="git-card">
+      <h3>Step 1 – Check Installation</h3>
+      <pre>git --version</pre>
+    </div>
+
+    <div class="git-card">
+      <h3>Step 2 – Initialize Git</h3>
+      <pre>git init</pre>
+    </div>
+
+    <div class="git-card">
+      <h3>Step 3 – Sign in to GitHub</h3>
+      <ul>
+        <li>Click Accounts icon (bottom-left)</li>
+        <li>Sign in to GitHub</li>
+        <li>Authorize in browser</li>
+      </ul>
+    </div>
+
+    <div class="git-card">
+      <h3>Step 4 – Connect Repository</h3>
+      <p><strong>Option A – VS Code</strong></p>
+      <ul>
+        <li>Source Control → Publish to GitHub</li>
+        <li>Select Public / Private</li>
+      </ul>
+
+      <p><strong>Option B – GitHub Website</strong></p>
+      <pre>
+git remote add origin 
+https://github.com/USERNAME/REPO.git
+      </pre>
+    </div>
+
+    <div class="git-card">
+      <h3>Step 5 – Add & Commit</h3>
+      <pre>
+git add .
+git commit -m "Initial commit"
+      </pre>
+    </div>
+
+    <div class="git-card">
+      <h3>Step 6 – Push to GitHub</h3>
+      <pre>
+git branch -M main
+git push -u origin main
+      </pre>
+    </div>
+
+    <div class="git-card error">
+      <h3>If Error Occurs</h3>
+      <pre>git config --global --unset user.password</pre>
+      <p>Then push again:</p>
+      <pre>git push -u origin main</pre>
+    </div>
+
+    <div class="git-card">
+      <h3>After Code Changes</h3>
+      <pre>
+git add . && git commit -m "Update" && git push
+      </pre>
+    </div>
+
+  </div>
+</section>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 MySite. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

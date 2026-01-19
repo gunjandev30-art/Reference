@@ -108,3 +108,91 @@ body {
     display: block;
   }
 }
+
+
+
+.git-section {
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #0f0f1a, #14142b);
+  color: white;
+}
+
+.git-title {
+  text-align: center;
+  font-size: 42px;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #4facfe, #00f2fe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.git-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.git-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 25px;
+  backdrop-filter: blur(10px);
+  transition: all 0.4s ease;
+  box-shadow: 0 0 30px rgba(0,0,0,0.3);
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.git-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 0 40px rgba(79,172,254,0.5);
+}
+
+.git-card h3 {
+  margin-bottom: 15px;
+  color: #4facfe;
+}
+
+.git-card pre {
+  background: #0a0a14;
+  padding: 15px;
+  border-radius: 10px;
+  color: #00f2fe;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+.git-card ul {
+  padding-left: 20px;
+}
+
+.git-card li {
+  margin-bottom: 8px;
+  color: #ddd;
+}
+
+.git-card.error h3 {
+  color: #ff6b6b;
+}
+
+.git-card.highlight {
+  border: 2px solid #00f2fe;
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .git-title {
+    font-size: 30px;
+  }
+}
