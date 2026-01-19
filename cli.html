@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Basic Responsive Site</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">MySite</h1>
+      <nav class="nav" id="nav">
+        <a href="#">Home</a>
+        <a href="github.html">GitHub</a>
+        <a href="shopify.html">Shopify</a>
+        <a href="cli.html">CLI</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn">☰</button>
+    </div>
+  </header>
+
+<section class="shopify-section">
+  <h2 class="shopify-title">Setup Shopify CLI</h2>
+
+  <div class="shopify-grid">
+
+    <div class="shopify-card">
+      <h3>Step 1 – Install Node.js</h3>
+      <pre>https://nodejs.org/en/download/</pre>
+      <pre>https://youtu.be/__7eOCxJyow</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 2 – Install Ruby</h3>
+      <pre>https://rubyinstaller.org/downloads/</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 3 – Install Git</h3>
+      <pre>https://git-scm.com/downloads</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 4 – Install Shopify CLI</h3>
+      <pre>npm install -g @shopify/cli @shopify/theme</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 5 – Check Version</h3>
+      <pre>shopify version</pre>
+      <p><strong>Error Fix:</strong></p>
+      <pre>https://stackoverflow.com/questions/56199111</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 6 – Create Folder</h3>
+      <pre>mkdir folder-name</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 7 – Open Folder</h3>
+      <pre>cd folder-name</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 8 – Pull Theme</h3>
+      <pre>shopify theme pull -s  
+https://gunjan-cirkle.myshopify.com</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 9 – Logout</h3>
+      <pre>shopify auth logout</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 10 – Dev Mode</h3>
+      <pre>shopify theme dev</pre>
+    </div>
+
+    <div class="shopify-card">
+      <h3>Step 11 – Push Changes</h3>
+      <pre>shopify theme push</pre>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2026 MySite. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
