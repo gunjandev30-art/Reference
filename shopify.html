@@ -23,7 +23,103 @@
   </header>
 
   <!-- Hero Section -->
-  <h1>Welcome</h1>
+<section class="git-section">
+  <h2 class="git-title">Shopify code snippets</h2>
+
+  <div class="git-steps">
+
+    <div class="git-card">
+      <h3>Presets</h3>
+      <pre>
+          {% schema %}
+            {
+              "name": "collection banner",
+              "settings": [],
+              "presets": [
+                {
+                  "name": "collection banner"
+                }
+              ]
+            }
+          {% endschema %}
+        </pre>
+    </div>
+
+    <div class="git-card">
+      <h3>Add to cart</h3>
+      <pre>
+          fetch(window.Shopify.routes.root + "cart/add.js",{
+    
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({
+                    'items': [
+                        {
+                            'id': 42390727917611,
+                            'quantity': 1
+                        }
+                    ]
+                })
+            }).then((res)=> res.json()).then((result)=> console.log("result",result));
+        </pre>
+    </div>
+
+    <div class="git-card">
+      <h3>Get and post different</h3><br>
+      <h3>Get used for get data (cart.js/product.js) POST used for add to cart</h3>
+      <pre>
+         fetch('/cart.js')
+          .then(res => res.json())
+          .then(cart => {
+            console.log(cart.item_count);
+            console.log(cart.items);
+          });
+        </pre>
+        <pre>
+          fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              id: variantId,
+              quantity: 1
+            })
+          });
+        </pre>
+    </div>
+
+    <div class="git-card">
+      <h3>JavaScript (Fetch API)</h3>
+      <pre>
+         document.querySelectorAll('.ajax-add-to-cart').forEach(button => {
+            button.addEventListener('click', function () {
+              const variantId = this.dataset.variantId;
+
+              fetch('/cart/add.js', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+                },
+                body: JSON.stringify({
+                  id: variantId,
+                  quantity: 1
+                })
+              })
+              .then(res => res.json())
+              .then(data => {
+                console.log('Added to cart:', data);
+                updateCartCount();
+              })
+              .catch(err => console.error('Error:', err));
+            });
+          });
+        </pre>
+    </div>
+
+  </div>
+</section>
 
 
   <!-- Footer -->
