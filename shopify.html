@@ -117,7 +117,41 @@
           });
         </pre>
     </div>
+       <div class="git-card">
+      <h3>Dawn cart refresh fuction</h3>
+      <pre>
+        function reloadCartDrawerAndIcon() {
+          fetch(location.href)
+            .then(response => response.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(html, 'text/html');
 
+              const newCartDrawer = doc.querySelector('#CartDrawer');
+              const currentCartDrawer = document.querySelector('#CartDrawer');
+              if (newCartDrawer && currentCartDrawer) {
+                currentCartDrawer.innerHTML = newCartDrawer.innerHTML;
+              }
+
+              const newCartIconBubble = doc.querySelector('#cart-icon-bubble');
+              const currentCartIconBubble = document.querySelector('#cart-icon-bubble');
+              if (newCartIconBubble && currentCartIconBubble) {
+                currentCartIconBubble.innerHTML = newCartIconBubble.innerHTML;
+              }
+
+              const cartDrawerElement = document.querySelector('cart-drawer');
+              if (cartDrawerElement) {
+                cartDrawerElement.classList.remove('is-empty');
+                cartDrawerElement.classList.add('active');
+              }
+
+              document.body.classList.add('overflow-hidden');
+            });
+        }
+
+         reloadCartDrawerAndIcon();
+        </pre>
+    </div>
   </div>
 </section>
 
